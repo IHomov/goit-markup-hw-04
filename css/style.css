@@ -170,8 +170,7 @@ h3 {
   border-radius: 4px;
   padding: 16px 32px;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 button:hover,
 button:focus {
@@ -284,9 +283,14 @@ h2 {
   padding-top: 120px;
 }
 .team-list-item {
-  background-color: #fff;
-  width: calc((100% - 3 * 24px) / 4);
+  background-color: #ffffff;
   border-radius: 0 0 4px 4px;
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.team-list-item:hover,
+.team-list-item:focus {
   box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
     0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
 }
@@ -298,14 +302,48 @@ h2 {
   text-align: center;
   padding: 32px 0;
 }
+.icons-team {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  gap: 24px;
+  width: 40px;
+  height: 40px;
+  
+}
+.icons-team a{
+  display: flex;
+   align-items: center;
+    justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: #4d5ae5;
+  border-radius:50%;
+
+}
+
+.icons-team a:hover,
+.icons-team a:focus{
+  background-color: #404bbf;
+}
+
 .icons-team,
 .icons-footer {
   margin-top: 8px;
+
+}
+.icons-team svg{
+  width: 16px;
+  height: 16px;
+  fill: #f4f4fd;
+
 }
 .icons-team svg,
-.icons-footer svg {
+.social-link svg {
   display: inline-block;
   margin-right: 24px;
+  fill: #4d5ae5;
+  
 }
 
 .icons-team svg:last-child {
@@ -337,14 +375,22 @@ h2 {
 .portfolio-item {
   background: #fff;
   width: calc((100% - 48px) / 3);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .porfolio-thumb {
   position: relative;
   overflow: hidden;
 }
 
+.portfolio-item:hover,
+.portfolio-item:focus {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
 .overlay {
   position: absolute;
+  top: 0;
   bottom: -100%;
   left: 0;
   width: 100%;
@@ -354,19 +400,15 @@ h2 {
   letter-spacing: 0.02em;
   color: #f4f4fd;
   background: #4d5ae5;
-  padding: 40px 32px 0 32px;
-  transition: bottom 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 40px 32px;
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   z-index: 1;
 }
 
 .portfolio-item:hover .overlay,
 .portfolio-item:focus .overlay {
-  bottom: 0;
-  box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
-    0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+  transform: translateY(0);
 }
 
 .portfolio {
@@ -417,16 +459,55 @@ h2 {
   display: flex;
   gap: 120px;
   justify-content: start;
-  align-items: center;
+  align-items: baseline;
+  margin-right: 120px;
 }
-
-.icons-footer,
+.social-list {
+  display: flex;
+  gap: 16px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.icons-footer svg,
 .icons-team svg {
   fill: #4d5ae5;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+.social-item {
+  width: 40px;
+  height: 40px;
+}
 .icons-footer svg:hover,
 .icons-team svg:hover {
-  fill: #31d0aa;
+  fill: #31d0aa; 
 }
-/* #endregion Footer */
+.paragraph-social {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #ffffff;
+  margin-bottom: 16px;
+}
+.social-link {
+  width: 100%;
+  height: 100%;
+  background-color: #4d5ae5;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social-link:hover,
+.social-link:focus {
+  background-color: #31d0aa;
+}
+
+.social-icon {
+  fill: #4d5ae5;
+}
+/* #endregion Footer
