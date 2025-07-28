@@ -170,13 +170,25 @@ h3 {
   border-radius: 4px;
   padding: 16px 32px;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 button:hover,
 button:focus {
   background-color: #404bbf;
+  color: #fff;
 }
 .hero {
-  background-color: #2e2f42;
+  max-width: 1440px;
+  margin: 0 auto;
+  background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(../images/Hero/people-office\ 1.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -203,12 +215,17 @@ button:focus {
 }
 .section-one {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 24px;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 .section-one-item {
   width: calc((100% - 3 * 24px) / 4);
+  display: flex;
+  flex-direction: column;
+  align-items: self-start;
+  flex-wrap: wrap;
 }
 .paragraph {
   font-size: 16px;
@@ -231,6 +248,26 @@ h2 {
   letter-spacing: 0.02em;
   color: #2e2f42;
   margin-bottom: 8px;
+}
+
+.container-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f4f4fd;
+  width: 100%;
+  max-width: 264px; /* Максимальна ширина іконки */
+  height: 112px; /* Висота контейнера для іконки */
+  border: 1px solid #8e8f99;
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+
+.icon {
+  display: block;
+  width: 100%; /* Іконка займатиме всю ширину контейнера */
+  height: 100%;
+  max-width: 64px; /* Обмежуємо максимальний розмір іконки */
 }
 
 /* #endregion Section 1 */
@@ -261,6 +298,19 @@ h2 {
   text-align: center;
   padding: 32px 0;
 }
+.icons-team,
+.icons-footer {
+  margin-top: 8px;
+}
+.icons-team svg,
+.icons-footer svg {
+  display: inline-block;
+  margin-right: 24px;
+}
+
+.icons-team svg:last-child {
+  margin-right: 0;
+}
 
 /* #endregion Section 2 */
 
@@ -288,6 +338,36 @@ h2 {
   background: #fff;
   width: calc((100% - 48px) / 3);
 }
+.porfolio-thumb {
+  position: relative;
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.02em;
+  color: #f4f4fd;
+  background: #4d5ae5;
+  padding: 40px 32px 0 32px;
+  transition: bottom 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 1;
+}
+
+.portfolio-item:hover .overlay,
+.portfolio-item:focus .overlay {
+  bottom: 0;
+  box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
+    0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+}
 
 .portfolio {
   background-color: inherit;
@@ -311,7 +391,8 @@ h2 {
   background-color: #2e2f42;
   padding: 100px 0;
 }
-.text-footer {
+.text-footer,
+.title-footer {
   color: #f4f4fd;
 }
 .footer-logo .logo-part {
@@ -325,5 +406,27 @@ h2 {
 .text-footer {
   width: 264px;
 }
+.title-footer {
+  margin-bottom: 16px;
+}
+.footer-logo-part {
+  max-width: 264px;
+}
 
+.footer-container {
+  display: flex;
+  gap: 120px;
+  justify-content: start;
+  align-items: center;
+}
+
+.icons-footer,
+.icons-team svg {
+  fill: #4d5ae5;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.icons-footer svg:hover,
+.icons-team svg:hover {
+  fill: #31d0aa;
+}
 /* #endregion Footer */
