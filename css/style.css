@@ -317,6 +317,7 @@ h2 {
   height: 40px;
   background-color: #4d5ae5;
   border-radius:50%;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 
@@ -336,10 +337,10 @@ h2 {
   fill: #f4f4fd;
 
 }
-.icons-team svg,
-.social-link svg {
+.icons-team svg
+ {
   display: inline-block;
-  fill: #4d5ae5;
+  fill: #4D5AE5;
   
 }
 
@@ -507,7 +508,8 @@ h2 {
 }
 
 .social-icon {
-  fill: #f4f4fd;
+  fill: #4D5AE5;
+  display: inline-block;
   
 }
 /* #endregion Footer
