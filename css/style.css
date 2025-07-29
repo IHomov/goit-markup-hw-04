@@ -182,7 +182,7 @@ button:focus {
   margin: 0 auto;
   background-image: linear-gradient(
       rgba(46, 47, 66, 0.7),
-      rgba(46, 47, 66, 0.7)), url(../images/Hero/people-office\ 1.jpg);
+      rgba(46, 47, 66, 0.7)), url(../images/Hero/background.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -334,13 +334,13 @@ h2 {
 .team-link svg{
   width: 16px;
   height: 16px;
-  fill: #f4f4fd;
+  fill: #4D5AE5 ;
 
 }
 .icons-team svg
  {
   display: inline-block;
-  fill: #4D5AE5;
+  fill: #F4F4FD;
   
 }
 
@@ -508,8 +508,9 @@ h2 {
 }
 
 .social-icon {
-  fill: #4D5AE5;
+  fill: #F4F4FD;
   display: inline-block;
+
   
 }
 /* #endregion Footer
