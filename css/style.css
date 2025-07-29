@@ -340,13 +340,10 @@ h2 {
 .team-svg {
   display: inline-block;
   fill: var(--icon-color-light);
-  
-}
-.team-link svg{
   width: 16px;
   height: 16px;
-  fill: #4D5AE5 ;}
-
+  
+}
 
 
 .team-svg:last-child {
