@@ -1,5 +1,6 @@
 :root {
   --icon-color-light: #f4f4fd;
+  
 }
 body {
   font-family: "Roboto", sans-serif;
@@ -334,18 +335,18 @@ h2 {
   margin-top: 8px;
 
 }
-.team-link svg{
-  width: 16px;
-  height: 16px;
-  fill: #4D5AE5 ;
 
-}
-.team-svg
- {
+
+.team-svg {
   display: inline-block;
   fill: var(--icon-color-light);
   
 }
+.team-link svg{
+  width: 16px;
+  height: 16px;
+  fill: #4D5AE5 ;}
+
 
 
 .team-svg:last-child {
