@@ -1,3 +1,6 @@
+:root {
+  --icon-color-light: #f4f4fd;
+}
 body {
   font-family: "Roboto", sans-serif;
   color: #434455;
@@ -340,9 +343,10 @@ h2 {
 .team-svg
  {
   display: inline-block;
-  fill: #F4F4FD;
+  fill: var(--icon-color-light);
   
 }
+
 
 .team-svg:last-child {
   margin-right: 0;
